@@ -11,7 +11,6 @@ import Skills from './pages/Skills.vue';
 import Project from './pages/Project.vue';
 import Experience from './pages/Experience.vue';
 import Contact from './pages/Contact.vue';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 export default {
   name: 'App',
   components: {
