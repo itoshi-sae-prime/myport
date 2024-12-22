@@ -19,7 +19,7 @@
                         <p>
                             <strong>Email:</strong> tukien159@gmail.com
                         </p>
-                        <p><strong>Website:</strong> https://myport-az9q.vercel.app</p>
+                        <p><strong>Website:</strong> <a href="https://myport-az9q.vercel.app">KinPortfolio.com</a></p>
                     </div>
                 </div>
                 <div class="h-[50%] xl:block lg:block hidden">
