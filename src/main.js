@@ -11,7 +11,6 @@ import {
     List
 } from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 // Import Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
