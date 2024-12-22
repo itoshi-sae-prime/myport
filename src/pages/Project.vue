@@ -35,11 +35,8 @@
                     </div>
                     <!-- Liên kết -->
                     <div class="flex justify-around text-[15px] gap-x-5">
-<<<<<<< HEAD
-                        <div class="button_project ">Review</div>
-=======
-                        <<div class="button_project ">Review</div>
->>>>>>> 5c09332f32d73cb05e7a2790f56a424d2db867ca
+                        <div class="button_project ">Review
+                        </div>
                         <div class="button_project"><a :href="project.link" target="_blank" class="">Source</a></div>
                     </div>
                 </div>
