@@ -11,7 +11,7 @@
         </section>
         <div class="gap-4 text-black h-full ">
             <div class="xl:flex lg:flex justify-between gap-5 items-center h-full mb-[30px] mt-[20px]"
-                v-for="(project, index) in projects" :key="index">
+                v-for="(project, index) in projects.slice(0, visibleProjects)" :key="index">
                 <!-- Phần hình ảnh -->
                 <div
                     class="xl:w-[50%] lg:w-[50%] w-[100%] h-full flex justify-center items-center border-2 p-5 bg-blue-200 rounded-lg">
@@ -35,14 +35,15 @@
                     </div>
                     <!-- Liên kết -->
                     <div class="flex justify-around text-[15px] gap-x-5">
-                        <div class="button_project ">Review</div>
-                        <div class="button_project"><a :href="project.link" target="_blank" class="">Source </a></div>
+                        <!-- <div class="button_project ">Review</div> -->
+                        <div class="button_project"><a :href="project.link" target="_blank" class="">Source</a></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center xl:mt-10 lg:mt-8 my-[10px] xl:text-[20px] lg:text-[18px] text-[15px]">
-            <button
+        <div v-if="visibleProjects < projects.length"
+            class="text-center xl:mt-10 lg:mt-8 my-[10px] xl:text-[20px] lg:text-[18px] text-[15px]">
+            <button @click="loadMore()"
                 class="bg-teal-500 text-white font-bold py-2 px-4 rounded hover:bg-teal-600 transition-all duration-300">
                 More Projects
             </button>
@@ -61,12 +62,19 @@ export default {
         return {
             projects: [
                 { image: 'https://i.imgur.com/jWlCTCD.jpeg', complete: '75%', title: 'LungTung Fashion Store', description: 'A vibrant fashion website that provides visitors with comprehensive information about the latest trends, fashion tips and our products, where you can view the shops products, perhaps buy and order, and contact LungTung store', technology: ["PHP", "Laravel", "MySQL", "Tailwind"], link: 'https://github.com/itoshi-sae-prime/LungTungShop' },
-                // { image: 'https://i.imgur.com/jWlCTCD.jpeg', title: 'LungTung Fashion Store', description: 'A travel website where visitors can get detailed information, latest news & useful tips on visas, destinations & what to do in Vietnam. Developed using the PHP,Laravel and styled using TailwindCSS, just a little NodeJs make API Product.', technology: ["PHP", "Laravel", "MySQL", "Tailwind"], link: 'https://example.com/project1' },
-                // { image: 'https://i.imgur.com/v6SKfAj.jpeg', complete: '50%', title: 'Kicap Store Clone Interface', description: 'A UI clone with modern components.', technology: ["ReactJs", "Tailwind"], link: 'https://example.com/project2' },
-                { image: 'https://i.imgur.com/DAYzpL1.jpeg', complete: '50%', title: 'My Portfolio', description: 'A sleek and responsive personal portfolio showcasing my skills, projects, and achievements in web development. Built with Vue.js for dynamic functionality and TailwindCSS for a modern, visually appealing design, the portfolio is a hub for potential employers or collaborators to explore my work.', technology: ["VueJs", "Tailwind"], link: 'https://example.com/project2' },
-                { image: 'https://i.imgur.com/1SAsPWx.jpeg', complete: '50%', title: 'Todolist App', description: 'A simple and efficient Todolist application designed to help users organize their daily tasks effectively. Built with React.js for dynamic user interaction and TailwindCSS for a clean and modern design, this app provides essential features for managing tasks.', technology: ["VueJs", "Tailwind"], link: 'https://example.com/project2' },
-            ]
+                { image: 'https://i.imgur.com/v6SKfAj.jpeg', complete: '50%', title: 'Kicap Store Clone Interface', description: 'A UI clone with modern components.', technology: ["ReactJs", "Tailwind"], link: 'https://example.com/project2' },
+                { image: 'https://i.imgur.com/DAYzpL1.jpeg', complete: '50%', title: 'My Portfolio', description: 'A sleek and responsive personal portfolio showcasing my skills, projects, and achievements in web development. Built with Vue.js for dynamic functionality and TailwindCSS for a modern, visually appealing design, the portfolio is a hub for potential employers or collaborators to explore my work.', technology: ["VueJs", "Tailwind"], link: 'https://github.com/itoshi-sae-prime/myport' },
+                { image: 'https://i.imgur.com/1SAsPWx.jpeg', complete: '50%', title: 'Todolist App', description: 'A simple and efficient Todolist application designed to help users organize their daily tasks effectively. Built with React.js for dynamic user interaction and TailwindCSS for a clean and modern design, this app provides essential features for managing tasks.', technology: ["ReactJs", "Tailwind"], link: 'https://github.com/itoshi-sae-prime/Todolist/tree/main/ten-du-an1' },
+                { image: 'https://i.imgur.com/hVAU2Jp.jpeg', complete: '75%', title: 'Check Price App', description: 'A travel website where visitors can get detailed information, latest news & useful tips on visas, destinations & what to do in Vietnam. Developed using the PHP,Laravel and styled using TailwindCSS, just a little NodeJs make API Product.', technology: ["PHP", "Laravel", "MySQL", "Tailwind"], link: 'https://example.com/project1' },
+            ],
+            visibleProjects: 2,
         };
+    },
+    methods: {
+        loadMore() {
+            // Tăng số lượng dự án hiển thị lên thêm 2
+            this.visibleProjects += 2;
+        }
     }
 };
 </script>

@@ -27,13 +27,13 @@ export default {
     name: 'Footer',
     methods: {
         openFacebook() {
-            window.open('https://www.facebook.com', '_blank');
+            window.open('https://www.facebook.com/TuKien19/', '_blank');
         },
         openInstagram() {
-            window.open('https://www.instagram.com', '_blank');
+            window.open('https://www.instagram.com/kizn.e/', '_blank');
         },
         openGithub() {
-            window.open('https://www.github.com', '_blank');
+            window.open('https://github.com/itoshi-sae-prime', '_blank');
         }
     }
 }
