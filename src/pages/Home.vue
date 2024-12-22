@@ -96,7 +96,7 @@ export default {
             window.open('https://github.com/itoshi-sae-prime', '_blank');
         },
         openCV() {
-            window.open('https://drive.google.com/file/d/1lCmo4tOzzjLIVDNGDcZWldt0NbFmfcA5/view?usp=sharing', '_blank');
+            window.open('https://drive.google.com/file/d/163aUeBWj68qNKHTCp-0yH2ea8gzh4hji/view?usp=sharing', '_blank');
         }
     },
     components: {
