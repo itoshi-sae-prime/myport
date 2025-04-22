@@ -35,7 +35,7 @@
                     </div>
                     <!-- Liên kết -->
                     <div class="flex justify-around text-[15px] gap-x-5">
-                        <div class="button_project"><a :href="project.deploy" target="_blank" class="">Review</div>
+                        <div class="button_project"><a :href="project.deploy" target="_blank" class="">Review</a></div>
                         <div class="button_project"><a :href="project.link" target="_blank" class="">Source</a></div>
                     </div>
                 </div>
